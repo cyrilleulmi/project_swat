@@ -2,6 +2,9 @@ package ch.hslu.appe.fbs.business.item;
 
 import ch.hslu.appe.fbs.business.authorisation.AuthorisationManager;
 import ch.hslu.appe.fbs.business.logger.Logger;
+import ch.hslu.appe.fbs.business.stock.Stock;
+import ch.hslu.appe.fbs.business.stock.StockException;
+import ch.hslu.appe.fbs.business.stock.StockFactory;
 import ch.hslu.appe.fbs.common.dto.ItemDTO;
 import ch.hslu.appe.fbs.common.dto.UserDTO;
 import ch.hslu.appe.fbs.common.exception.UserNotAuthorisedException;
@@ -13,9 +16,6 @@ import ch.hslu.appe.fbs.data.reorder.ReorderPersistorFactory;
 import ch.hslu.appe.fbs.model.db.Item;
 import ch.hslu.appe.fbs.model.db.Reorder;
 import ch.hslu.appe.fbs.wrapper.ItemWrapper;
-import ch.hslu.appe.stock.Stock;
-import ch.hslu.appe.stock.StockException;
-import ch.hslu.appe.stock.StockFactory;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;

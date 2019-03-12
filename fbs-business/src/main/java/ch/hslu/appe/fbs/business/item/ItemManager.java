@@ -1,9 +1,10 @@
 package ch.hslu.appe.fbs.business.item;
 
+import ch.hslu.appe.fbs.business.stock.StockException;
 import ch.hslu.appe.fbs.common.dto.ItemDTO;
 import ch.hslu.appe.fbs.common.dto.UserDTO;
 import ch.hslu.appe.fbs.common.exception.UserNotAuthorisedException;
-import ch.hslu.appe.stock.StockException;
+
 
 import java.util.List;
 
