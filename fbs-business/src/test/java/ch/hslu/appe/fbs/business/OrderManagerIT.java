@@ -55,7 +55,7 @@ public class OrderManagerIT {
         this.orderItemWrapper = new OrderItemWrapper();
     }
 
-    @Before
+    //@Before
     public void init() {
         this.createTestCustomer();
         List<Customer> customers = this.customerPersistor.getAll();
@@ -67,7 +67,7 @@ public class OrderManagerIT {
         this.testOrderItems.add(this.orderItemWrapper.dtoFromEntity(this.orderItemPersistor.getAll().get(0)));
     }
 
-    @Test
+    //@Test
     public void createOrder() throws UserNotAuthorisedException {
         Date date = new Date();
 
@@ -95,7 +95,7 @@ public class OrderManagerIT {
         Assert.assertEquals(persistedOrder, orderDTO);
     }
 
-    @After
+    //@After
     public void cleanup() {
         this.customerPersistor.delete(this.customerWrapper.entityFromDTO(this.testCustomer));
     }
