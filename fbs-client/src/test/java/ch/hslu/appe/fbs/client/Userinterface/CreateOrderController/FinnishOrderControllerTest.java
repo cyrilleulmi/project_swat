@@ -8,13 +8,4 @@ import static org.junit.Assert.*;
 public class FinnishOrderControllerTest {
 
     private static OrderController testee;
-
-    @Before
-    public void beforeTests(){
-        testee = new OrderController();
-    }
-
-    @Test
-    public void finishPressed() {
-    }
 }
