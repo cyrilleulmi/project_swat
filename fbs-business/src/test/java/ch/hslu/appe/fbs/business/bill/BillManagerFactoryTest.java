@@ -1,14 +1,13 @@
 package ch.hslu.appe.fbs.business.bill;
 
 import ch.hslu.appe.fbs.data.bill.BillPersistorFactory;
-import ch.hslu.appe.fbs.data.bill.BillPersistorFactoryImpl;
 import ch.hslu.appe.fbs.data.reminder.ReminderPersistorFactory;
 import ch.hslu.appe.fbs.wrapper.BillWrapper;
 import ch.hslu.appe.fbs.wrapper.OrderWrapper;
 import org.junit.Test;
 
-import static org.assertj.core.api.Assertions.*;
-import static org.mockito.Mockito.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.mock;
 
 public class BillManagerFactoryTest {
 
