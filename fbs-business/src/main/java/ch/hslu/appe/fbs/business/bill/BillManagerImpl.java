@@ -8,6 +8,7 @@ import ch.hslu.appe.fbs.common.exception.UserNotAuthorisedException;
 import ch.hslu.appe.fbs.common.permission.UserPermissions;
 import ch.hslu.appe.fbs.data.bill.BillPersistor;
 import ch.hslu.appe.fbs.data.bill.BillPersistorFactory;
+import ch.hslu.appe.fbs.data.bill.BillPersistorFactoryImpl;
 import ch.hslu.appe.fbs.data.reminder.ReminderPersistor;
 import ch.hslu.appe.fbs.data.reminder.ReminderPersistorFactory;
 import ch.hslu.appe.fbs.model.db.Bill;
@@ -29,11 +30,12 @@ public final class BillManagerImpl implements BillManager {
     private final BillWrapper billWrapper;
     private final OrderWrapper orderWrapper;
 
-    public BillManagerImpl() {
-        this.billPersistor = BillPersistorFactory.createBillPersistor();
-        this.reminderPersistor = ReminderPersistorFactory.createReminderPersistor();
-        this.billWrapper = new BillWrapper();
-        this.orderWrapper = new OrderWrapper();
+    public BillManagerImpl(BillPersistorFactory billPersistorFacory, ReminderPersistorFactory reminderPersistorFactory ,
+                           BillWrapper billWrapper, OrderWrapper orderWrapper) {
+        this.billPersistor = billPersistorFacory.createBillPersistor();
+        this.reminderPersistor = reminderPersistorFactory.createReminderPersistor();
+        this.billWrapper = billWrapper;
+        this.orderWrapper = orderWrapper;
     }
 
     @Override

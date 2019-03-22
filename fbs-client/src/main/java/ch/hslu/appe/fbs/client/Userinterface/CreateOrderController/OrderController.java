@@ -10,7 +10,6 @@ import java.io.IOException;
 
 public class OrderController {
 
-
     public AnchorPane anchorPane;
     public Button ViewItemsButton;
     public Button ViewOrderButton;
